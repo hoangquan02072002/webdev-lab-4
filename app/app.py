@@ -60,7 +60,6 @@ def login():
         user_login = request.form["loginInput"]
         user_password = request.form["passwordInput"]
         remember_me = request.form.get('remember_me') == 'on'
-
         auth_user = authentificate_user(user_login, user_password)
         if auth_user:
             login_user(auth_user, remember=remember_me)
